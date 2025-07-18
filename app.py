@@ -81,5 +81,10 @@ def get_leaves():
 
     return jsonify(events)
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5050)
+#if __name__ == '__main__':
+ #   app.run(debug=True, port=5050)
+
+if __name__ == "__main__":
+    from waitress import serve
+    print("▶️ Starting server on port 8000…")  
+    serve(app, host="0.0.0.0", port=8000)
